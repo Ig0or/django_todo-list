@@ -1,0 +1,55 @@
+body,
+section,
+div,
+form,
+input,
+button,
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, button{
+    cursor: pointer;
+}
+
+body {
+    background: skyblue;
+}
+
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px;
+    background: white;
+}
+
+.div__form form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.div__form input {
+    flex: 4;
+    padding: 12px;
+    margin-right: 10px;
+    border: 1px solid slategray;
+}
+
+.div__form button {
+    flex: 1;
+}
+
+.div__tasks div {
+    display: flex;
+    align-items: center;
+    background: cornsilk;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.div__tasks button {
+    padding: 5px;
+    margin-right: 12px;
+}

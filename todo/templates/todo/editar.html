@@ -1,0 +1,3 @@
+{% extends 'todo/base.html' %} {% block input %}
+<input type="text" placeholder="Adicionar uma nova tarefa" name="tarefa" value='{{tarefa.tarefa | capfirst}}'/>
+{% endblock %}

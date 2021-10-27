@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'todo/css/style.css' %}" />
+        <title>Tarefas</title>
+    </head>
+    <body>
+        <section>
+            <div class="div__form">
+                <form method="post">
+                    {% csrf_token %}
+                    {% block input %}
+                    {% endblock %}
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="div__tasks">
+                {% for tarefa in todas_tarefas %}
+                <div>
+                    <a href="{% url 'editar' tarefa.id %}"><button>Editar</button></a> 
+                    <a href="{% url 'excluir' tarefa.id %}"><button>Excluir</button></a> 
+                    <p>{{tarefa.tarefa | capfirst }}</p>
+                </div>
+                {%endfor%}
+            </div>
+        </section>
+    </body>
+</html>
